@@ -44,6 +44,7 @@ INSTALLED_APPS = (
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    #'django.middleware.locale.LocaleMiddleware', # Cambiar Idioma
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -111,3 +112,7 @@ STATICFILES_DIRS = (
 AUTH_USER_MODEL = 'users.User'
 
 LANGUAGE_CODE = 'es'
+
+# Optimizar cache ->> Debug = False --> ALLOW_HOST * --> collectstatic
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
+
